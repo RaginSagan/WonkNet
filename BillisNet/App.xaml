@@ -1,0 +1,126 @@
+﻿<Application x:Class="BillisNet.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:BillisNet"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="InputTextBox" TargetType="TextBox">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#111"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+        </Style>
+
+        <Style x:Key="GroupboxHeaderText" TargetType="TextBlock">
+            <Setter Property="FontWeight" Value="DemiBold"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+
+        <Style x:Key="RedditsListView" TargetType="ListView">
+            <Setter Property="Background" Value="#111"/>
+            <Setter Property="Foreground" Value="#33ccff"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Hidden"/>
+        </Style>
+        
+        <ControlTemplate x:Key="TabStripStyle" TargetType="{x:Type TabItem}">
+            <Grid x:Name="TabGrid">
+                <Rectangle x:Name="TabRectangle">
+                    <Rectangle.Style>
+                        <Style TargetType="Rectangle">
+                            <Setter Property="Fill" Value="#111"/>
+                        </Style>
+                    </Rectangle.Style>
+                </Rectangle>
+                <Border Name="TabBorder" BorderBrush="White" BorderThickness="2, 2, 2, 2"/>
+                <ContentPresenter Name="TabText"
+                                  ContentSource="Header"
+                                  VerticalAlignment="Center"
+                                  HorizontalAlignment="Center"
+                                  TextBlock.Foreground="White"
+                                  TextBlock.FontFamily="Consolas">
+                    <ContentPresenter.ContentTemplate>
+                        <DataTemplate>
+                            <TextBlock Padding="7 5" Text="{TemplateBinding Content}"/>
+                        </DataTemplate>
+                    </ContentPresenter.ContentTemplate>
+                </ContentPresenter>
+            </Grid>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter TargetName="TabRectangle" Property="Fill" Value="White"/>
+                    <Setter TargetName="TabText" Property="TextBlock.Foreground" Value="Black"/>
+                    <Setter TargetName="TabBorder" Property="BorderBrush" Value="Black"/>
+                    <Setter TargetName="TabBorder" Property="BorderThickness" Value="2, 2, 2, 2"/>
+                </Trigger>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="TabRectangle" Property="Fill" Value="White"/>
+                    <Setter TargetName="TabText" Property="TextBlock.Foreground" Value="Black"/>
+                    <Setter TargetName="TabBorder" Property="BorderBrush" Value="Black"/>
+                    <Setter TargetName="TabBorder" Property="BorderThickness" Value="2, 2, 2, 2"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="FlatButton" TargetType="Button">
+            <Grid>
+                <Rectangle x:Name="ButtonRectangle">
+                    <Rectangle.Style>
+                        <Style TargetType="Rectangle">
+                            <Setter Property="Fill" Value="#111"/>
+                        </Style>
+                    </Rectangle.Style>
+                </Rectangle>
+                <Border BorderBrush="White" BorderThickness="2, 2, 2, 2"/>
+                <ContentPresenter Name="ButtonContent" 
+                                  TextBlock.Foreground="White"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  Margin="15 5 15 5"
+                                  Content="{TemplateBinding Content}"
+                                  TextBlock.FontFamily="Consolas"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="ButtonContent" Property="TextBlock.Foreground" Value="#33ccff"/>
+                    <Setter TargetName="ButtonRectangle" Property="Fill" Value="#4d4d4d"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+
+        <ControlTemplate x:Key="FlatToggleButton" TargetType="ToggleButton">
+            <Grid Margin="10 0">
+                <Rectangle x:Name="ButtonRectangle">
+                    <Rectangle.Style>
+                        <Style TargetType="Rectangle">
+                            <Setter Property="Fill" Value="#111"/>
+                        </Style>
+                    </Rectangle.Style>
+                </Rectangle>
+                <Border BorderBrush="White" BorderThickness="2, 2, 2, 2"/>
+                <ContentPresenter Name="ButtonContent" 
+                                  TextBlock.Foreground="White"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  Margin="15 5 15 5"
+                                  Content="{TemplateBinding Content}"
+                                  TextBlock.FontFamily="Consolas"/>
+            </Grid>
+
+            <ControlTemplate.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter TargetName="ButtonContent" Property="TextBlock.Foreground" Value="#33ccff"/>
+                </Trigger>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter TargetName="ButtonRectangle" Property="Fill" Value="White"/>
+                    <Setter TargetName="ButtonContent" Property="TextBlock.Foreground" Value="Black"/>
+                </Trigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
+    </Application.Resources>
+</Application>

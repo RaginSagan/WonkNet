@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="WonkNet.exe" version="1.0.0.3" publicKeyToken="f3baaacdcefad0df" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="iconmonstr_school_18_240_1__mab_icon.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="WonkNet" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="WonkNet.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="662528">
+      <assemblyIdentity name="Newtonsoft.Json" version="11.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>9Yw3T/yq5ONtdA2Q+/f+cNCrtzKM2a86CntwgD6ZS6Q=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WonkNet.exe" size="925152">
+      <assemblyIdentity name="WonkNet" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>7la6MJDTGHMYtQscn/ktTRRJJrVog64Vhf85Ep72GgM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="iconmonstr_school_18_240_1__mab_icon.ico" size="255678">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AJKKf1tv+6eLo3WDLPDIa5OcSnPeFpoiLx8VeLDzfTo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="WonkNet.exe.config" size="916">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Mbj+7dwlzbgcCzfpvswztfTGM8n27P9Qdb9prFCXUng=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-13LSGJ3\brand" issuerKeyHash="fce000887a8d97ac9ddf76f4f0027e61f375eaad" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>QgR+yJzatuBfWm25JieUb/PcJnruQDaUhgxM73e2D+A=</DigestValue></Reference></SignedInfo><SignatureValue>Q6iD3JDjmYokKoRBALP7fcyD+ivD2Hm+IarCXmd604AavF51KfgiD3DkKzEvsN94TJi+WVzRfHl3a7Y0PH6QMX2IpZg2C655MOdB5UcZjyw1dvQIId8KnZJ5hQPtXlvOgBed1cCAGsyvmN8++pIJc7I+nbr5QhaotZp6HRXG5l4=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>w+YOoAuRbCUTKAsSaK82CWbqLDCQi4ng5C5/4sRppf7dr35HM0oJZrMRUPFX2PrSDCbeKO0ZmbjdRYeTGCE8l+DOO6rvGIWoqB5f32xaNV3tpL1AK5mD8sUbeqoAVZqVmuuipz5zAIacQ29yu2m7ZfBnbgcIQmb9nIg9+5NfZ/U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="e00fb677ef4c0c86943640ee7a26dcf36f942726b96d5a5fe0b6da9cc87e0442" Description="" Url=""><as:assemblyIdentity name="WonkNet.exe" version="1.0.0.3" publicKeyToken="f3baaacdcefad0df" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-13LSGJ3\brand</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>e+OK5lFQOB9Z69rwu9vp5OAfGkcTYUMdaCe+qmOu10M=</DigestValue></Reference></SignedInfo><SignatureValue>RVgbzFXzTwpPPG3gP7+/9xMIxWzkQrmsyB9SJotUMMz/CdfaBPBAGxRTJHwgAoV9jCX6GTX7xbQOqUrmRsUMCnB/aZ8kpTp+J3yAnX775gWdIitnXErijAumy2yS/MtlJygS5PYjpMXcVRuFKSRLTcHaLHISAQmkhDj9SaJBKPg=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>w+YOoAuRbCUTKAsSaK82CWbqLDCQi4ng5C5/4sRppf7dr35HM0oJZrMRUPFX2PrSDCbeKO0ZmbjdRYeTGCE8l+DOO6rvGIWoqB5f32xaNV3tpL1AK5mD8sUbeqoAVZqVmuuipz5zAIacQ29yu2m7ZfBnbgcIQmb9nIg9+5NfZ/U=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQGG8u3zCF54BFHHpXsumBnDANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtADEAMwBMAFMARwBKADMAXABiAHIAYQBuAGQwHhcNMTgwNTEyMjEzNTAzWhcNMTkwNTEzMDMzNTAzWjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtADEAMwBMAFMARwBKADMAXABiAHIAYQBuAGQwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMPmDqALkWwlEygLEmivNglm6iwwkIuJ4OQuf+LEaaX+3a9+RzNKCWazEVDxV9j60gwm3ijtGZm43UWHkxghPJfgzjuq7xiFqKgeX99sWjVd7aS9QCuZg/LFG3qqAFWalZrroqc+cwCGnENvcrtpu2XwZ24HCEJm/ZyIPfuTX2f1AgMBAAEwDQYJKoZIhvcNAQELBQADgYEAQbLnB87hoi5t7GdEM82WXph2ogaQWzITXCd9MadITguaiQttF02qfiRDDPl1cUKGNotoY0bxLAt8wnrOEgM4xiOWShvk1xAeb0YJpJ0vQ2N3K1o2C2FtcPVfJeiMlqr+0QcrQ3DwgQiTUnxULn5uBWdW6FyR/AYSJoPCEuJkVp0=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
